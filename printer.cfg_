@@ -229,22 +229,22 @@ screw2_name: back right
 screw3: 60,5
 screw3_name: front screw
 
-[firmware_retraction]
+#[firmware_retraction]
 #retract_length: 1.3
 ## Part tuning ##
 #retract_length: 1.8
-retract_length: 2.8
+#retract_length: 2.8
 ################
 
 #   The length of filament (in mm) to retract when G10 is activated,
 #   and to unretract when G11 is activated (but see
 #   unretract_extra_length below). The default is 0 mm.
-retract_speed: 47
+#retract_speed: 47
 #   The speed of retraction, in mm/s. The default is 20 mm/s.
-unretract_extra_length: 0
+#unretract_extra_length: 0
 #   The length (in mm) of *additional* filament to add when
 #   unretracting.
-unretract_speed: 25
+#unretract_speed: 25
 #   The speed of unretraction, in mm/s. The default is 10 mm/s.
 
 [mcu host]
@@ -270,11 +270,15 @@ serial: /tmp/klipper_host_mcu
 #####################################
 ##### 0.96" OLED Status display #####
 #####################################
+[include lcd.cfg]
+
 [display]
 lcd_type: ssd1306
 #If your display is not working uncomment the line below, it will define the SKR as i2c controller of the screen
 i2c_mcu: mcu
 i2c_bus: i2c1a
+display_group: __voron_display
+
 ############################
 
 [virtual_sdcard]
@@ -312,4 +316,4 @@ path: ~/sdcard
 #*# pid_kd = 122.387
 #*#
 #*# [stepper_z]
-#*# position_endstop = -0.265
+#*# position_endstop = -0.21
