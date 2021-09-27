@@ -1,0 +1,7 @@
+.v-image__image--cover {
+    background-position: center bottom !important;
+    background-size: contain !important;
+}
+.theme--dark.v-navigation-drawer {
+    background-color: #333333 !important;
+}
