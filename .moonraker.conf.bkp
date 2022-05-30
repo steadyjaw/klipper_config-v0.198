@@ -1,0 +1,36 @@
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+
+[file_manager]
+config_path = /home/dietpi/klipper_config
+log_path = /home/dietpi/klipper_logs
+
+[authorization]
+trusted_clients = 
+	192.168.178.0/24
+cors_domains = 
+	*
+
+[update_manager]
+refresh_interval = 24
+
+[update_manager mainsail]
+type = web
+channel = beta
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+[update_manager timelapse]
+type = git_repo
+primary_branch = main
+path = ~/moonraker-timelapse
+origin = https://github.com/mainsail-crew/moonraker-timelapse.git
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+
